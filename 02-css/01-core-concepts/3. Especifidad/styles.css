@@ -1,0 +1,44 @@
+/* REGLA DE ORO DE LA ESPECIFICIDAD:
+   (Puntos: 0, 0, 0) -> (ID, CLASE, ETIQUETA)
+*/
+
+/* 1. Selector de Etiqueta (VALOR: 0, 0, 1) */
+/* Es el más débil. */
+h1 {
+    color: red;
+}
+
+/* 2. Selector de Clase (VALOR: 0, 1, 0) */
+/* 10 puntos le ganan a 1 punto. El texto sería naranja si no hubiera un ID. */
+.titulo {
+    color: orange;
+    font-family: sans-serif;
+}
+
+/* 3. Selector de ID (VALOR: 1, 0, 0) */
+/* 100 puntos le ganan a la clase y a la etiqueta. Gana el verde. */
+#mi-titulo-unico {
+    color: green;
+}
+
+/* 4. Estilo en línea (Inline) (VALOR: 1, 0, 0, 0) */
+/* Si vas al HTML y ves el atributo 'style=""', ese tiene 1000 puntos. 
+   Le ganará incluso al ID de aquí arriba. */
+
+
+/* 5. El botón de pánico: !important */
+/* No tiene puntos, simplemente rompe las reglas y gana SIEMPRE.
+   Úsalo solo en casos de extrema emergencia. */
+/*
+p {
+    color: black !important;
+}
+*/
+
+/* --- EJEMPLO DE SUMA --- */
+
+/* Esta regla tiene: 1 clase + 1 etiqueta = 11 puntos (0, 1, 1) */
+section.contenedor {
+    background-color: #f4f4f4;
+    padding: 20px;
+}

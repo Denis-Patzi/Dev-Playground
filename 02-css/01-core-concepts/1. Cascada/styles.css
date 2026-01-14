@@ -1,0 +1,34 @@
+/* REGLA DE LA CASCADA: "EL ÚLTIMO GANA"
+   (Asumiendo que la especificidad es la misma)
+*/
+
+/* 1. Definimos un estilo para la tarjeta */
+.tarjeta {
+    padding: 20px;
+    border: 2px solid black;
+    background-color: lightgrey;
+}
+
+/* 2. Definimos el color del texto importante */
+.texto-importante {
+    color: blue;
+    font-weight: bold;
+}
+
+/* 3. ¡CONFLICTO! Volvemos a llamar a la misma clase más abajo */
+/* Como esta regla está escrita DESPUÉS, "pisa" a la anterior. 
+   El texto terminará siendo ROJO. */
+.texto-importante {
+    color: red;
+}
+
+/* --- CASCADA POR ORIGEN --- */
+
+/* Recuerda que el navegador lee en este orden:
+   1. CSS del Navegador (estilos por defecto como el azul de los links).
+   2. Tu archivo CSS externo (este archivo).
+   3. Estilos en la etiqueta <style> dentro del HTML.
+   4. Estilos en línea (style="...").
+   
+   Cada nivel hacia abajo tiene más peso en la cascada.
+*/

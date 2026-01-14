@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Prueba de Especificidad CSS</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <section class="contenedor">
+        <h1 id="mi-titulo-unico" 
+            class="titulo" 
+            style="color: blueviolet;"> 
+            ¿De qué color me veré?
+        </h1>
+
+        <p>Revisa el archivo CSS y los comentarios para entender el puntaje.</p>
+    </section>
+
+</body>
+</html>
+
+<!-- nota:
+
+* = 0
+div, p, h1 = 1
+.clase, [type="text"], :hover = 10, 
+#id = 100
+<div style="..."> = 1000
+color: red !important; = 10000 
+
+ -->

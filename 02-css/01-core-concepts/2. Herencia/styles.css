@@ -1,0 +1,44 @@
+/* LA REGLA GENERAL:
+   La herencia funciona principalmente con propiedades de TEXTO.
+   No funciona con propiedades de CAJA (Layout).
+*/
+
+.contenedor-padre {
+    /* PROPIEDADES QUE SÍ SE HEREDAN: */
+    color: #5d0f2f;             /* Los hijos serán de este color */
+    font-family: 'Arial', sans-serif;
+    text-align: center;
+    line-height: 1.6;           /* Espaciado entre líneas */
+
+    /* PROPIEDADES QUE NO SE HEREDAN: */
+    border: 5px solid #095689;  /* El borde NO aparece en los hijos */
+    padding: 40px;              /* El espacio interno NO se hereda */
+    margin: 20px;               /* El margen NO se hereda */
+    background-color: #47b99dd9;  /* El fondo NO se hereda (aunque parezca que sí, 
+                                   lo que pasa es que los hijos son transparentes 
+                                   por defecto) */
+}
+
+/* EL CASO ESPECIAL: Los elementos "Rebeldes"
+   Etiquetas como <a>, <input> y <button> tienen estilos por defecto
+   del navegador que BLOQUEAN la herencia.
+*/
+
+a {
+    /* Para que el link herede el color del padre, 
+       debemos forzarlo con la palabra clave: */
+
+    color: rgb(252, 63, 0);
+    /* color: inherit;  */
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.boton-prueba {
+    /* Los botones no heredan la fuente automáticamente en muchos navegadores */
+    font-family: inherit; 
+    cursor: pointer;
+    background-color: black;
+    color: rgb(0, 252, 252);
+    padding: 10px;
+}

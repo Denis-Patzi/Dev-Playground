@@ -1,0 +1,73 @@
+/* ==========================================
+   1. SELECTORES BÁSICOS
+   ========================================== */
+
+/* Selector Universal: Aplica a TODO (Especificidad: 0) */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Selector de Tipo/Etiqueta: Por nombre de etiqueta (Valor: 1) */
+body {
+    font-family: 'Segoe UI', sans-serif;
+    background-color: #f0f2f5;
+}
+
+/* Selector de Clase: Usa un punto (Valor: 10) */
+.titulo-destacado {
+    color: #63bc15;
+    text-transform: uppercase;
+}
+
+/* Selector de ID: Usa un hashtag (Valor: 100) */
+#cabecera-principal {
+    background-color: #faee9d;
+    padding: 20px;
+    border-bottom: 4px solid #bf45cd;
+}
+
+/* ==========================================
+   2. SELECTORES COMBINADORES
+   ========================================== */
+
+/* Descendiente (Espacio): CUALQUIER 'p' dentro de '.articulos' */
+.articulos p {
+    color: #4a4ae8;
+}
+
+/* Hijo Directo (>): Solo los 'h2' que son hijos inmediatos de 'article' */
+article > h2 {
+    color: #e74c3c;
+}
+
+/* Hermano Adyacente (+): El 'p' que sigue inmediatamente a un 'h2' */
+h2 + p {
+    font-style: italic;
+}
+
+/* ==========================================
+   3. SELECTORES DE ATRIBUTO
+   ========================================== */
+
+/* Selecciona por un atributo específico */
+a[target="_blank"] {
+    font-weight: bold;
+    color: #2980b9;
+}
+
+/* Selecciona por tipo de input */
+input[type="password"] {
+    border: 3px solid rgb(255, 136, 0);
+}
+
+/* ==========================================
+   4. AGRUPACIÓN
+   ========================================== */
+
+/* Aplicar el mismo estilo a varios a la vez */
+/* para que no tenga subrayado en a*/
+h1, h2, a {
+    text-decoration: none;
+}
