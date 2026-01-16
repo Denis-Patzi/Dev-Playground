@@ -32,6 +32,7 @@ titulo.style.color = "darkcyan";
 
 // Forma 2: Agregar o quitar clases (Recomendado)
 parrafo.classList.add('resaltado');
+//parrafo.classList.remove('resaltado');
 
 
 // ==========================================
@@ -42,8 +43,8 @@ console.log("--- Configurando Eventos ---");
 
 boton.addEventListener('click', () => {
     // Esta función se ejecuta cuando haces clic en el botón
-    document.body.style.backgroundColor = "#f0f0f0";
-    titulo.style.fontSize = "3rem";
+    document.body.style.backgroundColor = "rgb(79,227,182)";
+    titulo.style.fontSize = "5rem";
     console.log("¡El usuario hizo clic!");
 });
 
