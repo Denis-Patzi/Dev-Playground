@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Práctica DOM V2</title>
+    <style>
+        body { font-family: 'Segoe UI', sans-serif; padding: 20px; background-color: #f4f7f6; }
+        .contenedor { background: white; padding: 20px; border-radius: 10px; box-shadow: 0 4px 6px rgba(0,0,0,0.1); }
+        .zona-interactiva { border: 2px dashed #3498db; padding: 20px; margin: 20px 0; text-align: center; }
+        .item-lista { background: #e8f4fd; margin: 5px 0; padding: 10px; border-radius: 5px; list-style: none; display: flex; justify-content: space-between; }
+        button { cursor: pointer; padding: 8px 15px; border: none; border-radius: 5px; background: #3498db; color: white; }
+    </style>
+</head>
+
+<body>
+
+<div class="contenedor">
+    <h1>Control de Entrenamiento (DOM & BOM)</h1>
+
+    <div class="zona-interactiva" id="miZona">
+        <p id="instruccion">Mueve el mouse aquí o presiona una tecla</p>
+        <input type="text" id="inputTeclado" placeholder="Escribe algo...">
+    </div>
+
+    <h3>Mis Tareas de Sistemas</h3>
+    <ul id="listaTareas">
+        <li class="item-lista">Revisar apuntes de Redes <button class="btn-borrar">X</button></li>
+    </ul>
+    <button id="btnAgregar">Añadir Tarea</button>
+
+    <hr>
+    <p id="infoNavegador"></p>
+    <button onclick="guardarProgreso()">Guardar en LocalStorage</button>
+    <button onclick="borrarProgreso()" style="background:#e74c3c">Borrar Datos</button>
+</div>
+
+<script src="app.js"></script>
+</body>
+</html>
