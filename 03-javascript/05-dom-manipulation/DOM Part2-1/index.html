@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Interacción y Eventos - JS</title>
+    <style>
+        .card { border: 2px solid #eee; padding: 20px; width: 250px; transition: 0.3s; }
+        .dark-mode { background-color: #333; color: white; border-color: #555; }
+        .input-error { border: 2px solid red; outline: none; }
+        .btn { margin-top: 10px; cursor: pointer; }
+    </style>
+</head>
+
+<body>
+<h1>Manejo de Atributos y Eventos</h1>
+
+<div id="producto" class="card" data-id="501">
+    <img id="imagen-prod" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRX1TucJMmsGHeGk-DjmtWCybB8us4G-4D5gg&s" alt="Producto" width="150">
+    <h3>Laptop Gamer</h3>
+    <button class="btn" onclick="toggleTema()">Alternar Modo Oscuro</button>
+</div>
+
+<hr>
+
+<div>
+    <h3>Formulario de Pruebas</h3>
+    <div id="zona-raton" style="width: 200px; height: 100px; background: lightblue; margin-top: 10px; line-height: 100px; text-align: center;">
+        Pasa el ratón por aquí
+    </div>
+    <br>
+    <input type="text" id="campo-texto" placeholder="Escribe algo aquí...">
+    <p id="mensaje-teclado">Esperando teclado...</p>
+
+</div>
+
+<script src="eventos.js"></script>
+</body>
+</html>
