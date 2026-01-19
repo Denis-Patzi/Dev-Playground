@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Manipulación del DOM - JS</title>
+    <style>
+        .contenedor { border: 2px solid #333; padding: 20px; margin-top: 10px; }
+        .hijo { background-color: #f0f0f0; margin: 5px; padding: 10px; border: 1px solid #ccc; }
+        .resaltado { background-color: #d4edda; border-color: #c3e6cb; }
+    </style>
+</head>
+<body>
+<h1>Explorando el DOM</h1>
+
+<p>Este es el contenedor padre.</p>
+<div id="padre-principal" class="contenedor">
+    <div class="hijo">Hijo 1 (Original)</div>
+    <div class="hijo">Hijo 2 (Original)</div>
+</div>
+
+<hr>
+<button onclick="crearNuevoHijo()">107. Crear Elemento</button>
+<br>
+<br>
+<button onclick="analizarRelaciones()">108-110. Ver Relaciones en Consola</button>
+
+<script src="script.js"></script>
+</body>
+</html>
