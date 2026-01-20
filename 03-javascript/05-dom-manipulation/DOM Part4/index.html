@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BOM y LocalStorage - JavaScript</title>
+    <style>
+        body { font-family: sans-serif; padding: 20px; line-height: 1.6; }
+        button { padding: 10px; cursor: pointer; margin: 5px; }
+        .container { border: 1px solid #ccc; padding: 15px; border-radius: 8px; }
+    </style>
+</head>
+
+<body>
+
+<h1>Explorando el Navegador con JS</h1>
+
+<div class="container">
+    <h3>Pruebas de LocalStorage</h3>
+    <button onclick="guardarPreferencia()">Guardar "Modo Oscuro"</button>
+    <button onclick="leerPreferencia()">Leer Preferencia</button>
+
+    <hr>
+
+    <h3>Navegación</h3>
+    <button onclick="irAtras()">Volver Atrás (History)</button>
+    <button onclick="verUbicacion()">Ver URL Actual (Location)</button>
+</div>
+
+<script src="app.js"></script>
+</body>
+</html>
